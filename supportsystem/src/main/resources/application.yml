@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active:
+      - qa
+  application:
+    name: support-system
+netflix:
+  port: 8762
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:${netflix.port}/eureka
