@@ -1,6 +1,13 @@
 #This Yaml Configuration tells spring to create an in-memory H2 database
 spring:
-    jpa: null
+    jpa: null 
+    security:
+    oauth2:
+      client:
+        registration:
+          github:
+            clientId: 65808aba8c7f1d4548c8
+            clientSecret: 4f36d2a0447350b5f9d8f79bb4259425bde44bfc  
     datasource:
         username: sa
         password: 
@@ -11,18 +18,20 @@ spring:
 hibernate:
     ddl-auto: create
     dialect: org.hibernate.dialect.H2Dialect
-    show_sql: true
+    show_sql: false
     format_sql: true
     id:
         new_generator_mappings: false
 server:
-    port: 8080
+    port: 8085
     servlet:
       context-path: /support
 email:
     sendemail: true
-    fromemail: email@gmail.com
-    password: Password
+    fromemail: heroakashjain@gmail.com
+    password: Oodlee@123
 h2:
   console:
     enabled: true
+    
+logging.level.org.hibernate: INFO

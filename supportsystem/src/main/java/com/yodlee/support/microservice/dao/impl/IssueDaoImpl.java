@@ -21,8 +21,6 @@ public class IssueDaoImpl implements IssueDao {
 	@Autowired
 	private DBDao dDao;
 
-	
-
 	@Override
 	public Integer createIssue(Issue i) {
 		IssueStatusInfo statusInfo = getStatusInfo(100001);
@@ -32,7 +30,8 @@ public class IssueDaoImpl implements IssueDao {
 		String emailtemplate = Util.getEmailTemplate("admin");
 		emailtemplate = emailtemplate.replaceAll("#toolName", i.getToolInfo().getToolName())
 				.replaceAll("#issueNumber", String.valueOf(i.getIssueId()))
-				.replaceAll("#issuedescription", i.getIssueDescription()).replaceAll("#raisedby", i.getReporterName()).replaceAll("#url", i.getToolInfo().getToolIp());
+				.replaceAll("#issuedescription", i.getIssueDescription()).replaceAll("#raisedby", i.getReporterName())
+				.replaceAll("#url", i.getToolInfo().getToolIp());
 
 		return issueID;
 	}

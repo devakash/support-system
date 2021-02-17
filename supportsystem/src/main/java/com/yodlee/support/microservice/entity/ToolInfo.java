@@ -4,12 +4,16 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.Cacheable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -18,6 +22,9 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
  * 
  */
 @Entity(name = "tool_info")
+
+@Cacheable
+@Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
 public class ToolInfo implements Serializable {
 	private static final long serialVersionUID = 1L;
 
