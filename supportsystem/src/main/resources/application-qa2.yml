@@ -1,0 +1,30 @@
+#This Yaml Configuration tells spring to create an in-memory H2 database
+spring:
+    jpa: null 
+    datasource:
+        username: sa
+        password: 
+        initialize: true
+        initialization-mode: always
+        jdbc-url: 'jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1'
+        driver-class-name: org.h2.Driver
+hibernate:
+    ddl-auto: create
+    dialect: org.hibernate.dialect.H2Dialect
+    show_sql: false
+    format_sql: true
+    id:
+        new_generator_mappings: false
+server:
+    port: 8085
+    servlet:
+      context-path: /support
+email:
+    sendemail: true
+    fromemail: heroakashjain@gmail.com
+    password: Oodlee@123
+h2:
+  console:
+    enabled: true
+    
+logging.level.org.hibernate: INFO
