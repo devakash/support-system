@@ -11,7 +11,7 @@ spring:
 hibernate:
     ddl-auto: create
     dialect: org.hibernate.dialect.H2Dialect
-    show_sql: false
+    show_sql: true
     format_sql: true
     id:
         new_generator_mappings: false
@@ -21,8 +21,8 @@ server:
       context-path: /support
 email:
     sendemail: true
-    fromemail: heroakashjain@gmail.com
-    password: Oodlee@123
+    fromemail: email@gmail.com
+    password: 
 h2:
   console:
     enabled: true

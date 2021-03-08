@@ -6,8 +6,8 @@ spring:
       client:
         registration:
           github:
-            clientId: 65808aba8c7f1d4548c8
-            clientSecret: 4f36d2a0447350b5f9d8f79bb4259425bde44bfc  
+            clientId: 
+            clientSecret:   
     datasource:
         username: sa
         password: 
@@ -28,8 +28,8 @@ server:
       context-path: /support
 email:
     sendemail: true
-    fromemail: heroakashjain@gmail.com
-    password: Oodlee@123
+    fromemail: email@gmail.com
+    password: password
 h2:
   console:
     enabled: true

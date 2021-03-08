@@ -2,10 +2,8 @@ package com.yodlee.support.microservice.dao.impl;
 
 import javax.transaction.Transactional;
 
-import org.apache.commons.lang.builder.ReflectionToStringBuilder;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.stat.CacheRegionStatistics;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Repository;
